@@ -1,0 +1,334 @@
+/* See Bangkok - shared styles used by every page */
+@import url("https://fonts.googleapis.com/css?family=Prompt");
+
+::selection {
+    color: #3f4754;
+    background-color: #ffff;
+}
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #007bff;
+}
+a:hover {
+    color: #0056b3;
+}
+.new {
+    font-size: 25px;
+    transition: 0.1s ease, 2.5s ease;
+    background: #f8f9fa;
+    color: #141414;
+}
+.new:hover {
+    transform: scale(1.2);
+}
+.navbare {
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border-radius: 7px;
+}
+.navbare a {
+    float: left;
+    display: block;
+    color: #3f4754;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.navbare a:hover {
+    background-color: #3f4754;
+    color: #ffff;
+    transform: scale(1.2);
+}
+.itemss img {
+    width: 90%;
+    height: 450px;
+    margin-left: 85px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+.footersize {
+    background-color: #232323;
+    height: 120px;
+    margin-top: 80px;
+}
+.bk {
+    font-size: 20px;
+    font-family: "Vina Sans";
+}
+.slideshow .slick-next {
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    z-index: 10;
+}
+.slideshow .slick-arrow {
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+.pas:hover {
+    color:#e6e6e6;
+}
+.par {
+    font-size: 19px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.par:hover {
+    color:#e6e6e6;
+}
+.sum {
+    margin-left: 20px;
+}
+button {
+    font-size: 20px;
+    margin-left: 2%;
+    display: flex;
+    height: 5em;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee4b;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background: #fff;
+}
+button > svg {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 40px;
+    transition: all 0.4s ease-in;
+}
+button:hover > svg {
+    font-size: 2.6em;
+    transform: translateX(-10px);
+}
+button:hover {
+    box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+    transform: translateY(-2px);
+}
+.img {
+    width: 90%;
+    height: 200px;
+    margin-left: 85px;
+    object-fit: cover;
+    border-radius: 20px;
+    top: 10px;
+}
+.aa {
+    text-align: center;
+    font-size: 45px;
+    color: #ffff;
+}
+.cc {
+    top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 20px;
+    color: #3f4750;
+}
+.bb:hover {
+    color: #A435CC;
+}
+.bb:active {
+    color:#00CCBB;
+}
+.sizebig {
+    font-size: 40px;
+}
+.yell {
+    color: #E3D61E;
+}
+.yell:hover {
+    text-decoration: underline;
+}
+.button:hover {
+    color: var(--hover-text);
+    transform: translate(0.25rem,-0.25rem);
+    background: var(--hover-bg);
+    box-shadow: -0.25rem 0.60rem var(--bg);
+}
+.button:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+.pass {
+    text-align: center;
+    font-size: 25px;
+}
+.tr {
+    font-size: 35px;
+}
+.tj {
+    margin-left: 55px;
+}
+
+/* ---------- เพิ่มเติม ---------- */
+
+/* เมนูของหน้าที่กำลังเปิดอยู่ */
+.navbare a.active {
+    background-color: #3f4754;
+    color: #fff;
+}
+
+/* การ์ดหน้าหลัก: ซ่อนส่วนที่เลื่อนออกนอกการ์ด ไม่ให้หน้าเว็บเลื่อนไปด้านข้าง */
+.card,
+.carda {
+    overflow: hidden;
+}
+
+/* ลิงก์ยาวๆ (Google Maps, Facebook) ให้ขึ้นบรรทัดใหม่ได้ */
+a.bb,
+a.default_pointer_cs {
+    overflow-wrap: anywhere;
+}
+
+/* ---------- แท็บเล็ต ---------- */
+@media (max-width: 992px) {
+    html body .navbare a {
+        padding: 12px 22px;
+    }
+    html body .slideshow {
+        max-width: 100%;
+        width: calc(100% - 32px);
+        margin: 24px 16px 0;
+    }
+    html body .text-slide {
+        width: calc(100% - 32px);
+        margin: 24px 16px 0;
+    }
+    html body .items img {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+/* ---------- มือถือ ---------- */
+@media (max-width: 768px) {
+    /* เมนู: เรียงเป็นแถวที่ตัดบรรทัดได้ แทนการลอยซ้าย */
+    html body .navbar .container-fluid {
+        justify-content: center;
+        gap: 8px;
+    }
+    html body .new {
+        font-size: 20px;
+        margin-right: 0;
+    }
+    html body .new:hover,
+    html body .navbare a:hover {
+        transform: none;
+    }
+    html body .navbare {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    html body .navbare a {
+        float: none;
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    /* สไลด์และรูป */
+    html body .items img {
+        height: 260px;
+    }
+    html body .itemss img,
+    html body .img {
+        width: calc(100% - 32px);
+        margin-left: 16px;
+        height: 220px;
+    }
+
+    /* ข้อความ: เอาระยะขอบใหญ่ๆ ออก */
+    html body .par,
+    html body .cc,
+    html body .tk,
+    html body .tj,
+    html body .ty,
+    html body .cctv,
+    html body .custom-paragraph {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 17px;
+    }
+    html body .aa,
+    html body .pas {
+        font-size: 28px;
+        padding: 0 16px;
+    }
+    html body .sizebig,
+    html body .tr,
+    html body .intext {
+        font-size: 24px;
+    }
+
+    /* ปุ่ม */
+    html body .button {
+        font-size: 18px;
+        margin-left: 16px;
+        padding: 0.6em 2em;
+    }
+    html body button {
+        width: auto;
+        max-width: calc(100% - 32px);
+        margin-left: 16px;
+    }
+
+    /* การ์ดหน้าหลัก: เต็มความกว้าง และโชว์ข้อความตลอด (มือถือไม่มี hover) */
+    html body .sum {
+        margin-left: 0;
+        justify-content: center;
+    }
+    html body .card,
+    html body .carda {
+        width: calc(100% - 32px);
+        height: 380px;
+        margin: 0 16px 24px;
+    }
+    html body .card-body,
+    html body .carda-bodya {
+        right: 0;
+        background: rgba(0, 0, 0, 0.55);
+    }
+    html body .card-info,
+    html body .carda-infoa {
+        margin: 16px 0;
+    }
+
+    /* หน้าแรก */
+    html body .bg {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+    }
+    html body .item {
+        padding: 0 16px 40px;
+    }
+    html body .item h1 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+    }
+
+    html body .footersize {
+        height: auto;
+        padding: 16px 0;
+        margin-top: 48px;
+    }
+}
